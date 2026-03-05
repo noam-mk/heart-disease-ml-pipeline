@@ -4,20 +4,20 @@
 
 This project implements a structured machine learning pipeline to predict heart disease using a RandomForest classifier.
 
-The objective was to build a modular and reproducible ML project with a clean architecture suitable for production-oriented workflows.
+The goal was to build a modular and reproducible ML workflow with a clean project architecture.
 
 ---
 
 ## Project Structure
-
 heart_ml_project/
+│
+├── data/ → raw dataset
+├── models/ → trained model and artifacts
+├── src/ → modular pipeline scripts
+├── notebooks/ → experimentation
+├── requirements.txt → dependencies
+└── README.md → documentation
 
-- data/ → raw dataset  
-- models/ → trained model and generated artifacts  
-- src/ → modular pipeline  
-- notebooks/ → experimentation (optional)  
-- requirements.txt → dependencies  
-- README.md → project documentation  
 
 ---
 
@@ -28,7 +28,7 @@ heart_ml_project/
 3. Train / test split  
 4. Model training  
 5. Cross-validation  
-6. Evaluation (confusion matrix, classification report)  
+6. Model evaluation  
 7. Feature importance visualization  
 8. Model persistence (joblib)
 
@@ -36,11 +36,11 @@ heart_ml_project/
 
 ## Model
 
-- RandomForestClassifier (scikit-learn)
+RandomForestClassifier – scikit-learn
 
 ---
 
-## Metrics
+## Evaluation Metrics
 
 - Accuracy  
 - Cross-validation accuracy  
@@ -49,11 +49,27 @@ heart_ml_project/
 
 ---
 
+## Results
+
+RandomForest accuracy: **98.5%**
+
+Confusion Matrix:
+[[102 0]
+[ 3 100]]
+
+
+---
+
+## Feature Importance
+
+![Feature Importance](models/feature_importance.png)
+
+---
+
 ## How to Run
 
-Create a virtual environment and install dependencies:
-
-```bash
+Install dependencies:
 pip install -r requirements.txt
-## Run the full pipeline
+
+Run the full pipeline:
 python -m src.run
