@@ -2,5 +2,6 @@ venv/
 __pycache__/
 .ipynb_checkpoints/
 *.pyc
-models/*.pkl
-models/*.png
+models/*
+!models/feature_importance.png
+!models/heart_model.pkl
